@@ -168,7 +168,7 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
       MaterialPageRoute(
         builder: (context) => VideoPreviewScreen(
           video: video,
-          isPicked: true,
+          `isPicked`: true,
         ),
       ),
     );
