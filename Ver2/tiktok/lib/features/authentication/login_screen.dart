@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok/constants/gaps.dart';
 import 'package:tiktok/constants/sizes.dart';
 import 'package:tiktok/features/authentication/sign_up_screen.dart';
@@ -15,7 +16,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // SafeArea는 화면의 상단, 하단에 있는 노치 디자인을 고려해서 화면을 그려줌
     return Scaffold(
-      body: SafeArea(
+      body: const SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: Sizes.size40),
           child: Column(
@@ -36,10 +37,11 @@ class LoginScreen extends StatelessWidget {
               ),
               Gaps.v20,
               AuthButton(
-                text: 'Continue with Google',
-              ),
+                  icon: FaIcon(FontAwesomeIcons.apple),
+                  text: "Sign in with Apple"),
               Gaps.v20,
               AuthButton(
+                icon: FaIcon(FontAwesomeIcons.google),
                 text: 'Continue with Google',
               ),
             ],
